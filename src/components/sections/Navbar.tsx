@@ -53,8 +53,15 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <header className="fixed top-4 left-0 right-0 z-50">
-    <div className="max-w-[1200px] mx-auto px-4">
+    <header className="fixed top-4 left-8 right-8 z-50 justify-center pointer-events-none">
+    <nav className="
+        max-w-[1200px] w-full 
+        mx-auto px-4
+        backdrop-blur border border-white/20
+        rounded-2xl
+        pointer-events-auto
+        "
+        >
       <div className="flex items-center justify-between p-4">
 
         <div className="flex items-center space-x-2">
@@ -261,7 +268,7 @@ export function Navbar() {
           </div>
         </div>
     </div>
-  </div>
+  </nav>
   </header>
   )
 }
