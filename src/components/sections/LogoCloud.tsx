@@ -18,7 +18,7 @@ const logos = [
 
 export default function LogoCloud() {
   return (
-    <div className="p-4 w-full py-6 text-center">
+    <div className="my-16 w-full text-center">
         <h2 className="text-2xl font-semibold mb-4">
             Trusted Technology Partners
         </h2>
@@ -31,7 +31,7 @@ export default function LogoCloud() {
           className="group relative mt-12 flex gap-6 overflow-hidden p-2"
           style={{
             maskImage:
-              "linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)",
+              "linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 100%)",
           }}
         >
           {Array(5).fill(null).map((_, idx) => (
