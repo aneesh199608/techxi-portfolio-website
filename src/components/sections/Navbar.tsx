@@ -2,6 +2,7 @@ import * as React from "react"
 import { Code as CodeSand, MenuIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
+import { Link } from "react-router-dom";
 
 import {
   NavigationMenu,
@@ -66,9 +67,9 @@ export function Navbar() {
 
         <div className="flex items-center space-x-2">
           <CodeSand className="w-6 h-6" />
-          <a href="/" className="text-xl font-semibold">
+          <Link to="/" className="text-xl font-semibold">
             TechXi
-          </a>
+          </Link>
         </div>
 
         <nav className="hidden md:block">
@@ -79,7 +80,7 @@ export function Navbar() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  <a href="/">Home</a>
+                  <Link to="/">Home</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -89,8 +90,8 @@ export function Navbar() {
                   <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
-                        <a
-                          href="/projects"
+                        <Link
+                          to="/projects"
                           className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md
                           bg-cover bg-center
                           bg-[url('../../src/assets/callbot.png')]"
@@ -101,7 +102,7 @@ export function Navbar() {
                           <p className="text-muted-foreground text-sm leading-tight">
                             Projects across SaaS, Healthcare, eCommerce and more.
                           </p>
-                        </a>
+                        </Link>
                       </NavigationMenuLink>
                     </li>
                     <ListItem href="/projects/freezebooking" title="Freeze Booking">
@@ -139,7 +140,7 @@ export function Navbar() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  <a href="/about">About</a>
+                  <Link to="/about">About</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -148,7 +149,7 @@ export function Navbar() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  <a href="/contact">Contact</a>
+                  <Link to="/contact">Contact</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -240,7 +241,7 @@ export function Navbar() {
         <div className="flex items-center space-x-4">
           <div className="hidden md:block">
             <Button asChild>
-              <a href="/contact">Get in Touch</a>
+              <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>
 
@@ -254,14 +255,14 @@ export function Navbar() {
               </SheetTrigger>
               <SheetContent side="right" className="p-4 w-64">
                 <nav className="flex flex-col space-y-2">
-                  <a href="/">Home</a>
-                  <a href="/projects">Projects</a>
-                  <a href="/services">Services</a>
-                  <a href="/about">About</a>
-                  <a href="/contact">Contact</a>
+                  <Link to="/">Home</Link>
+                  <Link to="/projects">Projects</Link>
+                  <Link to="/services">Services</Link>
+                  <Link to="/about">About</Link>
+                  <Link to="/contact">Contact</Link>
                 </nav>
                 <Button asChild>
-                    <a href="/contact">Get in Touch</a>
+                    <Link to="/contact">Get in Touch</Link>
                   </Button>
               </SheetContent>
             </Sheet>
@@ -282,12 +283,12 @@ function ListItem({
   return (
     <li {...props}>
       <NavigationMenuLink asChild>
-        <a href={href}>
+        <Link to={href}>
           <div className="text-sm leading-none font-medium">{title}</div>
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   )

@@ -2,6 +2,7 @@ import { Button } from "../ui/button";
 // import app1 from "../../assets/callbot.png"
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Glow from "../ui/glow";
+import { Link } from "react-router-dom";
 
 const ANIMATION_SRC = "https://lottie.host/80615054-9009-4227-86e9-af242304f064/PKE9pEK6SI.lottie";
 
@@ -19,10 +20,10 @@ export default function Hero() {
             </p>
             <div className="flex gap-4 mt-4">
                 <Button size="lg" asChild>
-                    <a href="#services">See what we offer</a>
+                    <Link to="projects">Read Our Case Studies</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                    <a href="#contact">Contact Us</a>
+                    <Link to="contact">Contact Us</Link>
                 </Button>
             </div>
             </div>
