@@ -28,7 +28,7 @@ export default function Hero() {
             </div>
             </div>
 
-            <div className="relative w-full pt-16 mx-auto flex justify-center">
+            <div className="relative w-full max-w-4xl pt-16 mx-auto flex justify-center">
                 <div className="relative overflow-hidden relative z-10">
                     <div className="animate-fade-slide">
                         <DotLottieReact

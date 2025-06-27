@@ -126,6 +126,7 @@
 @theme {
   --color-brand-foreground: #38bdf8;
   --color-brand: #1e40af;
+   --animate-logo-cloud: logo-cloud 30s linear infinite;
 }
 
 @theme {
@@ -144,3 +145,10 @@
 .animate-fade-slide {
   animation: fade-slide 0.8s ease-out forwards;
 }
+
+@keyframes logo-cloud {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - 4rem)); }
+  }
+
+
