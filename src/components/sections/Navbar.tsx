@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
+// import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
 
 import {
   NavigationMenu,
@@ -15,39 +15,39 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Website Application",
+    href: "/services",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Web Design & Development, E-Commerce Website Development,Domain & Hosting Services, Web Based Application",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "Mobile Application",
+    href: "/services",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Android/iOS/Flutter, Hybrid/Cross Platform, Mobile App Porting, Mobile Streaming Application",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Custom Software",
+    href: "/services",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Blockchain, WinForm, Java, Windows Service/WPF/WCF So, Test Equipment Software, Task Schedule Software, System Tracking Software",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "IT Solutions",
+    href: "/services",
+    description: "Geographic Information System, Web Security, Business Intelligence, Robotic Process Automation, Voice Technology, Digital Marketing Solutions",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
+    title: "Salesforce Solutions",
+    href: "/services",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "Salesforce product development services Salesforce support services, Salesforce customization services, Salesforce consulting services",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    title: "HR Hiring",
+    href: "/services",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "PHP Developers Java Developers, .NET Developers, Front-end Developers, Project Managers, QA Testers",
   },
 ]
 
@@ -56,39 +56,50 @@ export function NavigationMenuDemo() {
     <NavigationMenu viewport={false}>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+          <NavigationMenuLink
+            asChild
+            className={navigationMenuTriggerStyle()}
+          >
+            <a href="/">Home</a>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    href="/"
-                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
+                    href="/projects"
+                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md
+                    bg-cover bg-center
+                    bg-[url('../../src/assets/callbot.png')]"
                   >
                     <div className="mt-4 mb-2 text-lg font-medium">
-                      shadcn/ui
+                      Explore All Projects
                     </div>
                     <p className="text-muted-foreground text-sm leading-tight">
-                      Beautifully designed components built with Tailwind CSS.
+                      Projects across SaaS, Healthcare, eCommerce and more.
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
+              <ListItem href="/projects/freezebooking" title="Freeze Booking">
+                Elevating Your Journey.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
+              <ListItem href="/projects/callbot" title="CallBot">
+                Automate Calls, WhatsApp Messages, and Emails Effortlessly..
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem href="/projects/cliniq" title="ClinIQ Healthcare">
+                Physician and Patient-centric Digital Health Platform
               </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
@@ -109,11 +120,20 @@ export function NavigationMenuDemo() {
             asChild
             className={navigationMenuTriggerStyle()}
           >
-            <a href="/docs">Docs</a>
+            <a href="/about">About</a>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
+          <NavigationMenuLink
+            asChild
+            className={navigationMenuTriggerStyle()}
+          >
+            <a href="/contact">Contact</a>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        {/* <NavigationMenuItem>
           <NavigationMenuTrigger>List</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-4">
@@ -192,7 +212,7 @@ export function NavigationMenuDemo() {
               </li>
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   )
