@@ -53,7 +53,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <header className="fixed top-4 left-8 right-8 z-50 justify-center pointer-events-none">
+    <header className="fixed top-4 left-4 right-4 sm:left-8 sm:right-8 z-50 justify-center pointer-events-none">
     <nav className="
         max-w-[1200px] w-full 
         mx-auto px-4
