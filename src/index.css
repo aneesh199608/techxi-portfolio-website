@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -117,4 +121,18 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@theme {
+  --color-brand-foreground: #38bdf8;
+  --color-brand: #1e40af;
+}
+
+@theme {
+  --animate-glow: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
 }

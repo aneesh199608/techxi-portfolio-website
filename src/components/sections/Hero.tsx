@@ -1,4 +1,6 @@
 import { Button } from "../ui/button";
+import app1 from "../../assets/callbot.png"
+import Glow from "../ui/glow";
 
 export default function Hero() {
     return (
@@ -18,6 +20,18 @@ export default function Hero() {
                     <a href="#contact">Contact Us</a>
                 </Button>
             </div>
+            </div>
+
+            <div className="relative w-full max-w-4xl pt-16 mx-auto flex justify-center">
+            <div className="relative w-[90%] max-w-2xl rounded-2xl shadow-2xl border border-white/10 overflow-hidden relative z-10 bg-black">
+                <img
+                src={app1}
+                alt="App screenshot"
+                className="w-full h-auto object-cover"
+                />
+            </div>
+            {/* --- Animated Glow below --- */}
+            <Glow variant="top" className="absolute -z-10 left-0 right-0 animate-glow" />
             </div>
 
             
