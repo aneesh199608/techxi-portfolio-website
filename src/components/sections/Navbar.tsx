@@ -1,7 +1,7 @@
-"use client"
-
 import * as React from "react"
-// import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
+import { Code as CodeSand, MenuIcon } from "lucide-react";
+import { Button } from "../ui/button";
+import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
 
 import {
   NavigationMenu,
@@ -51,170 +51,218 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ]
 
-export function NavigationMenuDemo() {
+export function Navbar() {
   return (
-    <NavigationMenu viewport={false}>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            asChild
-            className={navigationMenuTriggerStyle()}
-          >
-            <a href="/">Home</a>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+    <header className="fixed top-4 left-0 right-0 z-50">
+    <div className="max-w-[1200px] mx-auto px-4">
+      <div className="flex items-center justify-between p-4">
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    href="/projects"
-                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md
-                    bg-cover bg-center
-                    bg-[url('../../src/assets/callbot.png')]"
-                  >
-                    <div className="mt-4 mb-2 text-lg font-medium">
-                      Explore All Projects
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-tight">
-                      Projects across SaaS, Healthcare, eCommerce and more.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/projects/freezebooking" title="Freeze Booking">
-                Elevating Your Journey.
-              </ListItem>
-              <ListItem href="/projects/callbot" title="CallBot">
-                Automate Calls, WhatsApp Messages, and Emails Effortlessly..
-              </ListItem>
-              <ListItem href="/projects/cliniq" title="ClinIQ Healthcare">
-                Physician and Patient-centric Digital Health Platform
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+        <div className="flex items-center space-x-2">
+          <CodeSand className="w-6 h-6" />
+          <a href="/" className="text-xl font-semibold">
+            TechXi
+          </a>
+        </div>
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
+        <nav className="hidden md:block">
+          <NavigationMenu viewport={false}>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
                 >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+                  <a href="/">Home</a>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            asChild
-            className={navigationMenuTriggerStyle()}
-          >
-            <a href="/about">About</a>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="/projects"
+                          className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md
+                          bg-cover bg-center
+                          bg-[url('../../src/assets/callbot.png')]"
+                        >
+                          <div className="mt-4 mb-2 text-lg font-medium">
+                            Explore All Projects
+                          </div>
+                          <p className="text-muted-foreground text-sm leading-tight">
+                            Projects across SaaS, Healthcare, eCommerce and more.
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <ListItem href="/projects/freezebooking" title="Freeze Booking">
+                      Elevating Your Journey.
+                    </ListItem>
+                    <ListItem href="/projects/callbot" title="CallBot">
+                      Automate Calls, WhatsApp Messages, and Emails Effortlessly..
+                    </ListItem>
+                    <ListItem href="/projects/cliniq" title="ClinIQ Healthcare">
+                      Physician and Patient-centric Digital Health Platform
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            asChild
-            className={navigationMenuTriggerStyle()}
-          >
-            <a href="/contact">Contact</a>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {components.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      >
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
-        {/* <NavigationMenuItem>
-          <NavigationMenuTrigger>List</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[300px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <a href="#">
-                    <div className="font-medium">Components</div>
-                    <div className="text-muted-foreground">
-                      Browse all components in the library.
-                    </div>
-                  </a>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <a href="/about">About</a>
                 </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <a href="#">
-                    <div className="font-medium">Documentation</div>
-                    <div className="text-muted-foreground">
-                      Learn how to use the library.
-                    </div>
-                  </a>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <a href="#">
-                    <div className="font-medium">Blog</div>
-                    <div className="text-muted-foreground">
-                      Read our latest blog posts.
-                    </div>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+              </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <a href="#">Components</a>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <a href="/contact">Contact</a>
                 </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <a href="#">Documentation</a>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <a href="#">Blocks</a>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+              </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <a href="#" className="flex-row items-center gap-2">
-                    <CircleHelpIcon />
-                    Backlog
-                  </a>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <a href="#" className="flex-row items-center gap-2">
-                    <CircleIcon />
-                    To Do
-                  </a>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <a href="#" className="flex-row items-center gap-2">
-                    <CircleCheckIcon />
-                    Done
-                  </a>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem> */}
-      </NavigationMenuList>
-    </NavigationMenu>
+              {/* <NavigationMenuItem>
+                <NavigationMenuTrigger>List</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[300px] gap-4">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a href="#">
+                          <div className="font-medium">Components</div>
+                          <div className="text-muted-foreground">
+                            Browse all components in the library.
+                          </div>
+                        </a>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <a href="#">
+                          <div className="font-medium">Documentation</div>
+                          <div className="text-muted-foreground">
+                            Learn how to use the library.
+                          </div>
+                        </a>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <a href="#">
+                          <div className="font-medium">Blog</div>
+                          <div className="text-muted-foreground">
+                            Read our latest blog posts.
+                          </div>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[200px] gap-4">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a href="#">Components</a>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <a href="#">Documentation</a>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <a href="#">Blocks</a>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[200px] gap-4">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a href="#" className="flex-row items-center gap-2">
+                          <CircleHelpIcon />
+                          Backlog
+                        </a>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <a href="#" className="flex-row items-center gap-2">
+                          <CircleIcon />
+                          To Do
+                        </a>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink asChild>
+                        <a href="#" className="flex-row items-center gap-2">
+                          <CircleCheckIcon />
+                          Done
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem> */}
+            </NavigationMenuList>
+          </NavigationMenu>
+        </nav>
+
+        {/* Right: Desktop CTA & Mobile Hamburger */}
+        <div className="flex items-center space-x-4">
+          <div className="hidden md:block">
+            <Button asChild>
+              <a href="/contact">Get in Touch</a>
+            </Button>
+          </div>
+
+          {/* Mobile Menu */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <MenuIcon className="w-6 h-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="p-4 w-64">
+                <nav className="flex flex-col space-y-2">
+                  <a href="/">Home</a>
+                  <a href="/projects">Projects</a>
+                  <a href="/services">Services</a>
+                  <a href="/about">About</a>
+                  <a href="/contact">Contact</a>
+                </nav>
+                <Button asChild>
+                    <a href="/contact">Get in Touch</a>
+                  </Button>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+    </div>
+  </div>
+  </header>
   )
 }
 
