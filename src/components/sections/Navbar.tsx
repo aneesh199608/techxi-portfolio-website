@@ -58,7 +58,7 @@ export function Navbar() {
     <nav className="
         max-w-[1200px] w-full 
         mx-auto px-4
-        backdrop-blur border border-white/20
+        backdrop-blur bg-black/80 border border-white/20
         rounded-2xl
         pointer-events-auto
         "

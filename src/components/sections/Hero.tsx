@@ -20,7 +20,12 @@ export default function Hero() {
             </p>
             <div className="flex gap-4 mt-4">
                 <Button size="lg" asChild>
-                    <Link to="projects">Read Our Case Studies</Link>
+                    <Link to="projects"
+                    className="block                           
+                            dark:from-indigo-600 dark:via-teal-300 dark:to-pink-400
+                            animate-pulse-border
+                            transition-transform
+                            hover:scale-102">Read Our Case Studies</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                     <Link to="contact">Contact Us</Link>
