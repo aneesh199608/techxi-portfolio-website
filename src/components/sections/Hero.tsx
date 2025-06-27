@@ -8,7 +8,7 @@ const ANIMATION_SRC = "https://lottie.host/80615054-9009-4227-86e9-af242304f064/
 
 export default function Hero() {
     return (
-        <div className="px-4 py-16 sm:py-24 md:py-24">
+        <div>
             <div className="max-w-2xl mx-auto flex flex-col items-center gap-4 sm:gap-6 pt-16 text-center">
             <h1 className="text-4xl font-bold sm:text-6xl md:text-7xl leading-tight">
             Build, Launch, and Grow with <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent dark:from-indigo-300 dark:via-teal-300 dark:to-pink-400">
@@ -20,15 +20,15 @@ export default function Hero() {
             </p>
             <div className="flex gap-4 mt-4">
                 <Button size="lg" asChild>
-                    <Link to="projects"
+                    <Link to="contact"
                     className="block                           
                             dark:from-indigo-600 dark:via-teal-300 dark:to-pink-400
                             animate-pulse-border
                             transition-transform
-                            hover:scale-102">Read Our Case Studies</Link>
+                            hover:scale-102">Let's get on a call</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                    <Link to="contact">Contact Us</Link>
+                    <Link to="projects">Read Our Case Studies</Link>
                 </Button>
             </div>
             </div>
