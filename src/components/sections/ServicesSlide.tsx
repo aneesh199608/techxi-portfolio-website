@@ -56,7 +56,7 @@ const slides = [
     icon: <SiReact className="w-10 h-10" />,
     content: (
       <div className="flex flex-col gap-2 lg:gap-16 items-center">
-        <h3 className="text-lg lg:text-2xl font-semibold mb-2">Frontend</h3>
+        <h3 className="text-lg lg:text-2xl font-semibold">Frontend</h3>
         <div className="flex gap-4 lg:gap-8 flex-wrap p-8 items-center justify-center">
             <SiReact className="w-6 h-6 sm:w-10 sm:h-10 text-cyan-400" title="React" />
             <SiTailwindcss className="w-6 h-6 sm:w-10 sm:h-10 text-sky-400" title="Tailwind CSS" />
@@ -82,7 +82,7 @@ const slides = [
     icon: <SiNodedotjs className="w-10 h-10 md:w-10 md:h-10 w-4 h-4" />,
     content: (
       <div className="flex flex-col gap-2 lg:gap-16 items-center">
-        <h3 className="text-lg lg:text-2xl font-semibold mb-2">Backend</h3>
+        <h3 className="text-lg lg:text-2xl font-semibold">Backend</h3>
         <div className="flex gap-4 lg:gap-8 flex-wrap p-8 items-center justify-center">
             <SiNodedotjs className="w-6 h-6 sm:w-10 sm:h-10 text-white-600" title="Node.js" />
             <SiExpress className="w-6 h-6 sm:w-10 sm:h-10 text-gray-700 dark:text-white" title="Express.js" />
@@ -111,7 +111,7 @@ const slides = [
     icon: <SiPostgresql className="w-10 h-10 md:w-10 md:h-10 w-4 h-4" />,
     content: (
       <div className="flex flex-col gap-2 lg:gap-16 items-center">
-        <h3 className="text-lg lg:text-2xl font-semibold mb-2">Database</h3>
+        <h3 className="text-lg lg:text-2xl font-semibold">Database</h3>
         <div className="flex gap-4 lg:gap-8 flex-wrap p-8 items-center justify-center">
             <SiMysql className="w-6 h-6 sm:w-10 sm:h-10 text-white-500" title="MySQL" />
             <SiPostgresql className="w-6 h-6 sm:w-10 sm:h-10 text-white-400" title="PostgreSQL" />
@@ -137,7 +137,7 @@ const slides = [
     icon: <SiGithub className="w-10 h-10 md:w-10 md:h-10 w-4 h-4" />,
     content: (
       <div className="flex flex-col gap-2 lg:gap-16 items-center">
-        <h3 className="text-lg lg:text-2xl font-semibold mb-2">Source Control</h3>
+        <h3 className="text-lg lg:text-2xl font-semibold">Source Control</h3>
         <div className="flex gap-4 lg:gap-8 items-center">
           <SiGithub className="w-6 h-6 sm:w-10 sm:h-10 text-white" title="GitHub" />
           <SiGitlab className="w-6 h-6 sm:w-10 sm:h-10 text-orange-500" title="GitLab" />
@@ -154,7 +154,6 @@ export default function ServicesSlide() {
         <h2 className="
         text-2xl sm:text-4xl lg:text-5xl
         font-semibold 
-        text-white 
         text-center 
         max-w-4xl 
         mx-auto 

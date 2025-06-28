@@ -63,11 +63,11 @@ export function Navbar() {
         pointer-events-auto
         "
         >
-      <div className="flex items-center justify-between p-4">
+      <div className="flex items-center justify-between p-2 sm:p-4">
 
         <div className="flex items-center space-x-2">
-          <CodeSand className="w-6 h-6" />
-          <Link to="/" className="text-xl font-semibold">
+          <CodeSand className="w-4 h-auto sm:w-6" />
+          <Link to="/" className="sm:text-xl text-lg font-semibold">
             TechXi
           </Link>
         </div>

@@ -18,7 +18,7 @@ export default function Hero() {
             <p className="text-lg text-muted-foreground font-medium max-w-2xl">
             We deliver innovative web, mobile, and custom software solutions that help businesses grow, automate, and lead in a fast-changing world.
             </p>
-            <div className="flex gap-4 mt-4">
+            <div className="flex sm:flex-row flex-col sm:gap-4 gap-8 mt-4">
                 <Button size="lg" asChild>
                     <Link to="contact"
                     className="block                           
