@@ -3,6 +3,7 @@ import { Code as CodeSand, MenuIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
 import { Link } from "react-router-dom";
+import Logo from "@/components/Logo";
 
 import {
   NavigationMenu,
@@ -66,7 +67,7 @@ export function Navbar() {
       <div className="flex items-center justify-between p-2 sm:p-4">
 
         <div className="flex items-center space-x-2">
-          <CodeSand className="w-4 h-auto sm:w-6" />
+          <Logo className="w-4 h-auto sm:w-6" />
           <Link to="/" className="sm:text-xl text-lg font-semibold">
             TechXi
           </Link>

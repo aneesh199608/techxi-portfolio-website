@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, Copy, BadgeCheckIcon } from "lucide-react";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import Footer from "@/components/sections/Footer";
 
 const CONTACT = {
   email: "sales@techxi.in",
@@ -41,7 +42,7 @@ export default function Contact() {
             label="Phone"
             value={CONTACT.phone}
           />
-          {/* Uncomment if you want address
+          {/* 
           <ContactCard
             icon={<MapPin className="w-16 h-16 mx-auto mb-3 text-purple-500" />}
             label="Address"
@@ -49,6 +50,7 @@ export default function Contact() {
           /> */}
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

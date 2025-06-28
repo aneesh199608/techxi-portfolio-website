@@ -1,3 +1,4 @@
+import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
 import LogoCloud from "@/components/sections/LogoCloud";
 import ServicesSlide from "@/components/sections/ServicesSlide";
@@ -8,6 +9,7 @@ export default function Home() {
             <Hero />
             <LogoCloud />
             <ServicesSlide />
+            <Footer />
         </div>
     )
 }

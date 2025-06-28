@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { ShieldCheck, User, Goal } from "lucide-react";
 import { Link } from "react-router-dom";
 // import svgBG from "../assets/blurry-gradient-haikei.svg"
+import Footer from "@/components/sections/Footer";
 
 export default function About() {
   return (
@@ -69,7 +70,9 @@ export default function About() {
           </Button>
         </div>
       </div>
+      <Footer />
     </section>
+    
   )
 }
 
