@@ -55,9 +55,9 @@ const slides = [
     id: "frontend",
     icon: <SiReact className="w-10 h-10" />,
     content: (
-      <div className="flex flex-col gap-4 sm:gap-16 items-center">
-        <h3 className="text-2xl font-semibold mb-2">Frontend</h3>
-        <div className="flex gap-8 flex-wrap p-8 items-center justify-center">
+      <div className="flex flex-col gap-2 lg:gap-16 items-center">
+        <h3 className="text-lg lg:text-2xl font-semibold mb-2">Frontend</h3>
+        <div className="flex gap-4 lg:gap-8 flex-wrap p-8 items-center justify-center">
             <SiReact className="w-6 h-6 sm:w-10 sm:h-10 text-cyan-400" title="React" />
             <SiTailwindcss className="w-6 h-6 sm:w-10 sm:h-10 text-sky-400" title="Tailwind CSS" />
             <SiJavascript className="w-6 h-6 sm:w-10 sm:h-10 text-yellow-400" title="JavaScript" />
@@ -81,9 +81,9 @@ const slides = [
     id: "backend",
     icon: <SiNodedotjs className="w-10 h-10 md:w-10 md:h-10 w-4 h-4" />,
     content: (
-      <div className="flex flex-col gap-4 sm:gap-16 items-center">
-        <h3 className="text-2xl font-semibold mb-2">Backend</h3>
-        <div className="flex gap-8 flex-wrap p-8 items-center justify-center">
+      <div className="flex flex-col gap-2 lg:gap-16 items-center">
+        <h3 className="text-lg lg:text-2xl font-semibold mb-2">Backend</h3>
+        <div className="flex gap-4 lg:gap-8 flex-wrap p-8 items-center justify-center">
             <SiNodedotjs className="w-6 h-6 sm:w-10 sm:h-10 text-white-600" title="Node.js" />
             <SiExpress className="w-6 h-6 sm:w-10 sm:h-10 text-gray-700 dark:text-white" title="Express.js" />
             <SiPython className="w-6 h-6 sm:w-10 sm:h-10 text-white-400" title="Python" />
@@ -110,9 +110,9 @@ const slides = [
     id: "database",
     icon: <SiPostgresql className="w-10 h-10 md:w-10 md:h-10 w-4 h-4" />,
     content: (
-      <div className="flex flex-col gap-4 sm:gap-16 items-center">
-        <h3 className="text-2xl font-semibold mb-2">Database</h3>
-        <div className="flex gap-8 flex-wrap p-8 items-center justify-center">
+      <div className="flex flex-col gap-2 lg:gap-16 items-center">
+        <h3 className="text-lg lg:text-2xl font-semibold mb-2">Database</h3>
+        <div className="flex gap-4 lg:gap-8 flex-wrap p-8 items-center justify-center">
             <SiMysql className="w-6 h-6 sm:w-10 sm:h-10 text-white-500" title="MySQL" />
             <SiPostgresql className="w-6 h-6 sm:w-10 sm:h-10 text-white-400" title="PostgreSQL" />
             <SiMongodb className="w-6 h-6 sm:w-10 sm:h-10 text-green-500" title="MongoDB" />
@@ -136,9 +136,9 @@ const slides = [
     id: "sourcecontrol",
     icon: <SiGithub className="w-10 h-10 md:w-10 md:h-10 w-4 h-4" />,
     content: (
-      <div className="flex flex-col gap-4 sm:gap-16 items-center">
-        <h3 className="text-2xl font-semibold mb-2">Source Control</h3>
-        <div className="flex gap-4 items-center">
+      <div className="flex flex-col gap-2 lg:gap-16 items-center">
+        <h3 className="text-lg lg:text-2xl font-semibold mb-2">Source Control</h3>
+        <div className="flex gap-4 lg:gap-8 items-center">
           <SiGithub className="w-6 h-6 sm:w-10 sm:h-10 text-white" title="GitHub" />
           <SiGitlab className="w-6 h-6 sm:w-10 sm:h-10 text-orange-500" title="GitLab" />
           <SiBitbucket className="w-6 h-6 sm:w-10 sm:h-10 text-white-400" title="Bitbucket" />

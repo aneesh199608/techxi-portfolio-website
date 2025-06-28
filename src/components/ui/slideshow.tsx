@@ -35,19 +35,21 @@ export function Slideshow({
 
   // Check if mobile view
   const isMobile = typeof window !== "undefined" ? window.innerWidth < 768 : false;
+  const mobileHeight = "h-64";
 
   return (
     <div className={`relative
-        ${isMobile ? "flex flex-col gap-6" : `flex overflow-hidden rounded-xl gap-8 ${height}`}
+        ${isMobile ? "flex flex-col gap-6 ${mobileHeight}" : `flex overflow-hidden rounded-xl gap-8 ${height}`}
       `}>
       {slides.map((slide, idx) => {
-        const isActive = idx === active;
+        const isActive = isMobile ? true : idx === active;
         return (
           <div
             key={slide.id}
             className={`
               transition-all duration-500 ease-in-out flex
               ${isMobile ? "w-full" : isActive ? "flex-[3]" : "flex-[1] min-w-0"}
+              ${isMobile ? mobileHeight : ""}
             `}
             onMouseEnter={() => !isMobile && (setPaused(true), setActive(idx))}
             onMouseLeave={() => !isMobile && setPaused(false)}
@@ -61,6 +63,7 @@ export function Slideshow({
                   : "bg-gradient-to-r from-blue-700 to-blue-900"}
                 flex items-center justify-center
                 overflow-hidden
+                ${isMobile ? mobileHeight : ""}
               `}
             >
               {isActive ? (
