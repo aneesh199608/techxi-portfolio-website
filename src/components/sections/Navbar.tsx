@@ -19,36 +19,36 @@ const components: { title: string; href: string; description: string }[] = [
     title: "Website Application",
     href: "/services",
     description:
-      "Web Design & Development, E-Commerce Website Development,Domain & Hosting Services, Web Based Application",
+      "Custom Web App, E-Commerce, Domain, Hosting",
   },
   {
     title: "Mobile Application",
     href: "/services",
     description:
-      "Android/iOS/Flutter, Hybrid/Cross Platform, Mobile App Porting, Mobile Streaming Application",
+      "Android, iOS, Flutter, Hybrid/Cross Platform, Porting, Streaming",
   },
   {
     title: "Custom Software",
     href: "/services",
     description:
-      "Blockchain, WinForm, Java, Windows Service/WPF/WCF So, Test Equipment Software, Task Schedule Software, System Tracking Software",
+      "Blockchain, WinForm, Java, Windows Service/WPF/WCF So, Testing",
   },
   {
     title: "IT Solutions",
     href: "/services",
-    description: "Geographic Information System, Web Security, Business Intelligence, Robotic Process Automation, Voice Technology, Digital Marketing Solutions",
+    description: "GIS, Web Security, Business Intelligence, RPA, Voice Technology, Digital Marketing",
   },
   {
     title: "Salesforce Solutions",
     href: "/services",
     description:
-      "Salesforce product development services Salesforce support services, Salesforce customization services, Salesforce consulting services",
+      "Salesforce Development, Support, Customization, Consulting.",
   },
   {
     title: "HR Hiring",
     href: "/services",
     description:
-      "PHP Developers Java Developers, .NET Developers, Front-end Developers, Project Managers, QA Testers",
+      "Hiring for PHP, Java, .NET, Front-end, PMs, QAs",
   },
 ]
 

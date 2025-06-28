@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 
 const CONTACT = {
-  email: "ankush@techxi.com",
-  phone: "+91 98765 43210",
+  email: "sales@techxi.in",
+  phone: "+91 63784 51341",
   // address: "Koramangala, Bangalore, Karnataka, India"
 };
 
