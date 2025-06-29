@@ -66,7 +66,7 @@ export default function About() {
             If you’re passionate about learning, collaboration, and building products that make a difference, we’d love to hear from you. And if everything works out, we can make a position available for you!
           </p>
           <Button asChild size="lg">
-            <Link to="contact">Become a TechXi Partner</Link>
+            <Link to="../contact">Become a TechXi Partner</Link>
           </Button>
         </div>
       </div>

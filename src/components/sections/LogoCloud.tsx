@@ -4,6 +4,7 @@ import fitbox from "../../assets/product-logos/fitbox.png"
 import hannover from "../../assets/product-logos/hanoverresearch.png"
 import kaitutu from "../../assets/product-logos/kaituttu.png"
 import cliniq from "../../assets/product-logos/cliniq.png"
+import softcontrol from "../../assets/product-logos/softcontrol.png"
 
 
 const logos = [
@@ -12,8 +13,8 @@ const logos = [
   {src: fitbox },
   {src: hannover},
   {src: kaitutu},
-  {src: cliniq }
- 
+  {src: cliniq },
+  {src: softcontrol}
 ];
 
 export default function LogoCloud() {

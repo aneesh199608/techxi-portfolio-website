@@ -7,7 +7,6 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import { Routes, Route } from "react-router-dom"
 import ProjectDetail from "./pages/Projects/ProjectDetail"
-import ProjectGrid from "./components/sections/ProjectGrid"
 
 function App() {
   return (
