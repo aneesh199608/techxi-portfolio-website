@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Code as CodeSand, MenuIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
 import { Link } from "react-router-dom";

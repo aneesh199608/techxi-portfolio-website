@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   Code,
   Palette,
   LineChart,

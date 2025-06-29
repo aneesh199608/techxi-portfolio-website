@@ -70,11 +70,10 @@ export default function ServicesPage() {
             <Tilt
             key={svc.title}
             glareEnable={true}
-            glareMaxOpacity={0.3}
+            glareMaxOpacity={0.5}
             glareColor="#284EFA"
             glareBorderRadius="2rem"
             scale={1.2}
-            className="rounded-lg"
           >
             <Card
             key={svc.title}

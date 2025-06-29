@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import LogoCloud from "@/components/sections/LogoCloud";
 import ServicesSlide from "@/components/sections/ServicesSlide";
 import HomeServicesSection from "@/components/sections/HomeServicesSection";
+import CTA from "@/components/sections/CTA";
 
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
             <LogoCloud />
             <ServicesSlide />
             <HomeServicesSection />
+            <CTA />
             <Footer />
         </div>
     )
