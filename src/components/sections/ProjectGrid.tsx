@@ -2,57 +2,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
-
-const projects = [
-  {
-  id: 1,
-  title: "CallBOT – AI-powered Communication Automation",
-  description: "An enterprise-grade platform that automates outbound calls, WhatsApp messages, and emails using AI workflows tailored for business outreach.",
-  image: "/project-screenshots/callbot.png",
-  tags: ["React", "Node.js", "Tailwind", "Vite", "PostgreSQL"],
-  url: "callbot",
-},
-{
-    id: 2,
-    title: "ClinIQ – Digital Health Platform",
-    description: "Unified platform for doctors and patients: video consults, e-prescriptions, records and payments, all in one place.",
-    image: "/project-screenshots/cliniq.png",
-    tags: ["React", "Firebase", "Stripe", "Redux"],
-    url: "cliniq",
-  },
-  {
-    id: 3,
-    title: "FreezeBooking – Smart Travel Scheduling",
-    description: "A seamless travel booking platform integrating real-time fares, itinerary planning, and easy cancellations.",
-    image: "/project-screenshots/freezebooking.jpg",
-    tags: ["React", "TypeScript", "Next.js", "MongoDB"],
-    url: "freezebooking",
-  },
-  {
-    id: 4,
-    title: "Orbiting – SaaS Subscription Analytics",
-    description: "Automated dashboard for tracking revenue, churn, and engagement for SaaS businesses.",
-    image: "/project-screenshots/orbiting.png",
-    tags: ["Next.js", "Recharts", "Express.js"],
-    url: "orbiting",
-  },
-  {
-    id: 5,
-    title: "E-Bunch – Multi-vendor E-Commerce",
-    description: "Custom e-commerce solution with vendor onboarding, product management, and analytics.",
-    image: "/project-screenshots/ebunch.png",
-    tags: ["React", "Node.js", "Stripe", "Redux"],
-    url: "ebunch",
-  },
-  {
-    id: 6,
-    title: "Fitbox – Smart Fitness App",
-    description: "A fitness coaching app offering routines, progress tracking, and personalized recommendations.",
-    image: "/project-screenshots/fitbox.png",
-    tags: ["React Native", "Firebase", "Expo"],
-    url: "fitbox",
-  },
-];
+import { projects } from "@/data/projects";
 
 export default function ProjectGrid() {
   return (
@@ -94,12 +44,25 @@ export default function ProjectGrid() {
                 </div>
               </CardContent>
               <CardFooter className="mt-auto">
-                <Button size="sm" variant="secondary" disabled className="cursor-not-allowed opacity-60">
-                  <Link to={project.url} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                {project.comingSoon ? (
+                    <Button size="sm" variant="secondary" disabled className="cursor-not-allowed opacity-60">
                     <span className="text-sm font-medium">Coming Soon</span>
-                  </Link>
-                </Button>
-              </CardFooter>
+                    </Button>
+                ) : project.hasCaseStudy && project.url ? (
+                    <Button size="sm" variant="secondary" asChild>
+                    <Link to={project.url} className="flex items-center">
+                        <span className="text-sm font-medium">Read Case Study</span>
+                    </Link>
+                    </Button>
+                ) : (
+                    <Button size="sm" variant="secondary" asChild>
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <span className="text-sm font-medium">Visit Project</span>
+                    </a>
+                    </Button>
+                )}
+                </CardFooter>
+
             </Card>
           ))}
         </div>

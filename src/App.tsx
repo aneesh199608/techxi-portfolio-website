@@ -6,6 +6,8 @@ import Services from "./pages/Services"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import { Routes, Route } from "react-router-dom"
+import ProjectDetail from "./pages/Projects/ProjectDetail"
+import ProjectGrid from "./components/sections/ProjectGrid"
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />        
