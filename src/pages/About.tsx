@@ -32,7 +32,7 @@ export default function About() {
 
         <div className="flex flex-wrap items-center justify-center gap-10 py-8">
           <Stat number="10+" label="Years Experience" />
-          <Stat number="50+" label="Projects Delivered" />
+          <Stat number="20+" label="Projects Delivered" />
           <Stat number="12" label="Tech Stacks" />
           <Stat number="97%" label="Client Retention" />
         </div>

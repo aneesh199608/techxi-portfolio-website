@@ -15,43 +15,43 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Website Application",
-    href: "/services",
-    description:
-      "Custom Web App, E-Commerce, Domain, Hosting",
-  },
-  {
-    title: "Mobile Application",
-    href: "/services",
-    description:
-      "Android, iOS, Flutter, Hybrid/Cross Platform, Porting, Streaming",
-  },
-  {
-    title: "Custom Software",
-    href: "/services",
-    description:
-      "Blockchain, WinForm, Java, Windows Service/WPF/WCF So, Testing",
-  },
-  {
-    title: "IT Solutions",
-    href: "/services",
-    description: "GIS, Web Security, Business Intelligence, RPA, Voice Technology, Digital Marketing",
-  },
-  {
-    title: "Salesforce Solutions",
-    href: "/services",
-    description:
-      "Salesforce Development, Support, Customization, Consulting.",
-  },
-  {
-    title: "HR Hiring",
-    href: "/services",
-    description:
-      "Hiring for PHP, Java, .NET, Front-end, PMs, QAs",
-  },
-]
+// const components: { title: string; href: string; description: string }[] = [
+//   {
+//     title: "Website Application",
+//     href: "/services",
+//     description:
+//       "Custom Web App, E-Commerce, Domain, Hosting",
+//   },
+//   {
+//     title: "Mobile Application",
+//     href: "/services",
+//     description:
+//       "Android, iOS, Flutter, Hybrid/Cross Platform, Porting, Streaming",
+//   },
+//   {
+//     title: "Custom Software",
+//     href: "/services",
+//     description:
+//       "Blockchain, WinForm, Java, Windows Service/WPF/WCF So, Testing",
+//   },
+//   {
+//     title: "IT Solutions",
+//     href: "/services",
+//     description: "GIS, Web Security, Business Intelligence, RPA, Voice Technology, Digital Marketing",
+//   },
+//   {
+//     title: "Salesforce Solutions",
+//     href: "/services",
+//     description:
+//       "Salesforce Development, Support, Customization, Consulting.",
+//   },
+//   {
+//     title: "HR Hiring",
+//     href: "/services",
+//     description:
+//       "Hiring for PHP, Java, .NET, Front-end, PMs, QAs",
+//   },
+// ]
 
 export function Navbar() {
   return (
@@ -119,7 +119,7 @@ export function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              {/* <NavigationMenuItem>
                 <NavigationMenuTrigger>Services</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
@@ -134,6 +134,15 @@ export function Navbar() {
                     ))}
                   </ul>
                 </NavigationMenuContent>
+              </NavigationMenuItem> */}
+
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link to="/services">Services</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
