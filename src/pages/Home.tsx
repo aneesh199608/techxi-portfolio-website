@@ -2,6 +2,7 @@ import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
 import LogoCloud from "@/components/sections/LogoCloud";
 import ServicesSlide from "@/components/sections/ServicesSlide";
+import HomeServicesSection from "@/components/sections/HomeServicesSection";
 
 export default function Home() {
     return (
@@ -9,6 +10,7 @@ export default function Home() {
             <Hero />
             <LogoCloud />
             <ServicesSlide />
+            <HomeServicesSection />
             <Footer />
         </div>
     )
