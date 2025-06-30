@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet";
 import { Link } from "react-router-dom";
 import Logo from "@/components/Logo";
+import { useState } from "react";
 
 import {
   NavigationMenu,
@@ -54,6 +55,8 @@ import {
 // ]
 
 export function Navbar() {
+
+  const [open, setOpen] = useState(false);
   return (
     <header className="fixed top-4 left-4 right-4 sm:left-8 sm:right-8 z-50 justify-center pointer-events-none">
     <nav className="
@@ -257,7 +260,7 @@ export function Navbar() {
 
           {/* Mobile Menu */}
           <div className="md:hidden">
-            <Sheet>
+            <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <MenuIcon className="w-6 h-6" />
@@ -265,14 +268,14 @@ export function Navbar() {
               </SheetTrigger>
               <SheetContent side="right" className="p-4 w-64">
                 <nav className="flex flex-col space-y-2">
-                  <Link to="/">Home</Link>
-                  <Link to="/projects">Projects</Link>
-                  <Link to="/services">Services</Link>
-                  <Link to="/about">About</Link>
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+                  <Link to="/projects" onClick={() => setOpen(false)}>Projects</Link>
+                  <Link to="/services" onClick={() => setOpen(false)}>Services</Link>
+                  <Link to="/about" onClick={() => setOpen(false)}>About</Link>
+                  <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
                 </nav>
                 <Button asChild>
-                    <Link to="/contact">Get in Touch</Link>
+                    <Link to="/contact" onClick={() => setOpen(false)}>Get in Touch</Link>
                   </Button>
               </SheetContent>
             </Sheet>
