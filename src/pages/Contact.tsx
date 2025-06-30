@@ -67,10 +67,28 @@ function ContactCard({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
+  try {
+    // Try modern Clipboard API first
     await navigator.clipboard.writeText(value);
     setCopied(true);
     setTimeout(() => setCopied(false), 1200);
-  };
+  } catch (err) {
+    // Fallback for some mobile browsers
+    try {
+      const textarea = document.createElement("textarea");
+      textarea.value = value;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1200);
+    } catch (fallbackErr) {
+      alert("Copy failed! Please copy manually.");
+    }
+  }
+};
+
 
   return (
     <div
