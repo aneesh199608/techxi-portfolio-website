@@ -15,7 +15,7 @@ export default function Hero() {
             TechXi
             </span>
             </h1>
-            <p className="text-lg text-muted-foreground font-medium max-w-2xl">
+            <p className="text-full sm:text-lg text-muted-foreground font-medium max-w-2xl">
             We deliver innovative web, mobile, and custom software solutions that help businesses grow, automate, and lead in a fast-changing world.
             </p>
             <div className="flex sm:flex-row flex-col sm:gap-4 gap-8 mt-4">
