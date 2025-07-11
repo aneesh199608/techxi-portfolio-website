@@ -4,7 +4,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Glow from "../ui/glow";
 import { Link } from "react-router-dom";
 
-const ANIMATION_SRC = "https://lottie.host/80615054-9009-4227-86e9-af242304f064/PKE9pEK6SI.lottie";
+const ANIMATION_SRC = "https://lottie.host/502343ef-2f84-4e60-9216-59aa2d5b97e3/bGvcd5uKKf.lottie";
 
 export default function Hero() {
     return (
@@ -33,17 +33,17 @@ export default function Hero() {
             </div>
             </div>
 
-            <div className="relative w-full max-w-4xl pt-16 mx-auto flex justify-center">
-                <div className="relative overflow-hidden relative z-10">
-                    <div className="animate-fade-slide">
+            <div className="relative w-full pt-16 mx-auto flex justify-center">
+                {/* <div className="relative overflow-hidden relative z-10"> */}
+                    <div className="w-[100%] h-auto sm:w-[1200px] sm:h-auto animate-fade-slide">
                         <DotLottieReact
                         src={ANIMATION_SRC}
                         loop
                         autoplay
-                        className="w-full h-auto transform scale-100 sm:scale-100"
+                        className="w-full h-auto transform"
                         />
                     </div>
-                </div>
+                {/* </div> */}
                 {/* --- Animated Glow below --- */}
                 <Glow variant="top" className="absolute -z-10 inset-x-0 animate-glow" />
             </div>
